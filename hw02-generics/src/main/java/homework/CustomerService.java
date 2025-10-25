@@ -1,13 +1,11 @@
 package homework;
 
-import java.util.Comparator;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 @SuppressWarnings({"java:S1186", "java:S1135", "java:S1172"}) // при выполнении ДЗ эту аннотацию надо удалить
 public class CustomerService {
 
-    private final TreeMap<Customer, String> map = new TreeMap<>(Comparator.comparing(Customer::getScores));
+    private final NavigableMap<Customer, String> map = new TreeMap<>(Comparator.comparing(Customer::getScores));
 
     // todo: 3. надо реализовать методы этого класса
     // важно подобрать подходящую Map-у, посмотрите на редко используемые методы, они тут полезны
